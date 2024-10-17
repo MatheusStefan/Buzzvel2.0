@@ -8,11 +8,11 @@ const Button: React.FC<ButtonProps> = ({ text }) => {
   return (
     <button
       className="
-   w-[306px] 
+    w-[306px] 
     h-[64px] 
     px-[24px] 
     py-[20px] 
-    rounded-[100px] 
+    rounded-[100px]
     border-2
     border-purple
     opacity-100
@@ -28,6 +28,7 @@ const Button: React.FC<ButtonProps> = ({ text }) => {
     duration-300
     group
     shadow-custom
+    w-fit
 "
     >
       {text}

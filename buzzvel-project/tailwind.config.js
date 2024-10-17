@@ -5,7 +5,8 @@ export default {
     extend: {
       boxShadow: {
         'custom': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
-      }
+      },
+      fontFamily: ['Roboto', 'sans-serif']
     },
     colors: {
       'purple': "#581C87",
@@ -13,6 +14,11 @@ export default {
       'light-yellow': "#FBBF24",
       'mid-yellow': "#FCD34D",
       'white': "#fff",
+      'light-blue': '#0369A1',
+      'light-blue2': "#BAE6FD",
+      'light-grey': "#475569",
+      'black': "#000",
+      'dark-blue': "#0F172A",
     }
   },
   plugins: [],
