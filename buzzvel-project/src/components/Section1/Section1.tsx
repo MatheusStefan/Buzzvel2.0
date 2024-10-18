@@ -7,7 +7,7 @@ type Section1 = unknown;
 const Section1: React.FC<Section1> = () => {
   return (
     <>
-      <div className="flex flex-col w-full md:mt-5">
+      <div id="products" className="flex flex-col w-full md:mt-5">
         <div className="flex flex-col md:flex-row items-start justify-start">
           <div className="absolute right-0 top-0 mb">
             <img

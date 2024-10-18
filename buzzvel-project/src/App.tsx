@@ -12,8 +12,10 @@ function App() {
     <div className="flex flex-col items-center justify-center">
       <Header />
       <Section1 />
-      {/* <Section2 /> */}
+      <Section2 />
       <Section3 />
+      <Section4 />
+      <Section5 />
       <Footer />
     </div>
   );

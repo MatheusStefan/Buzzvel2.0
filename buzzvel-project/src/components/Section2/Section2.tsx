@@ -5,15 +5,16 @@ type Section2Props = unknown;
 
 const Section2: React.FC<Section2Props> = () => {
   return (
-    <div className="relative w-full mt-5 h-auto pb-72">
+    <div id="solutions" className="relative w-full mt-5 h-auto pb-48 flex items-center justify-center">
       <Title
         subtitle="No more waste"
         title="Pick the Sun"
         content="Et pulvinar nec interdum integer id urna molestie porta nullam. A,
           donec ornare sed turpis pulvinar purus maecenas quam a. Erat porttitor
           pharetra sed in mauris elementum sollicitudin."
+        alignment="center"
       />
-      <div className="absolute top-[200px] w-full h-auto z-0">
+      <div className="absolute bottom-[200px] w-full h-fit z-0">
         <svg
           width="502"
           height="711"

@@ -4,7 +4,7 @@ type Section5Props = unknown
 
 const Section5: React.FC<Section5Props> = () => {
     return (
-        <div className="">
+        <div id='configure' className="">
             Section5 Component
         </div>
     );

@@ -562,6 +562,10 @@ video {
   position: relative;
 }
 
+.bottom-\[200px\] {
+  bottom: 200px;
+}
+
 .left-1\/2 {
   left: 50%;
 }
@@ -586,12 +590,32 @@ video {
   top: 120px;
 }
 
-.top-\[200px\] {
-  top: 200px;
-}
-
 .top-\[30px\] {
   top: 30px;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.top-2 {
+  top: 0.5rem;
 }
 
 .z-0 {
@@ -678,6 +702,26 @@ video {
   margin-top: 20rem;
 }
 
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+
+.mt-\[100px\] {
+  margin-top: 100px;
+}
+
+.mt-\[150px\] {
+  margin-top: 150px;
+}
+
+.mt-\[250px\] {
+  margin-top: 250px;
+}
+
+.mt-\[300px\] {
+  margin-top: 300px;
+}
+
 .flex {
   display: flex;
 }
@@ -702,8 +746,13 @@ video {
   height: auto;
 }
 
-.w-1\/3 {
-  width: 33.333333%;
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.w-2\/5 {
+  width: 40%;
 }
 
 .w-\[100px\] {
@@ -735,20 +784,16 @@ video {
   width: 50%;
 }
 
-.w-3\/4 {
-  width: 75%;
+.w-1\/4 {
+  width: 25%;
 }
 
-.w-2\/3 {
-  width: 66.666667%;
+.w-3\/5 {
+  width: 60%;
 }
 
-.w-2\/4 {
-  width: 50%;
-}
-
-.w-2\/5 {
-  width: 40%;
+.w-4\/5 {
+  width: 80%;
 }
 
 .-translate-x-1\/2 {
@@ -776,12 +821,20 @@ video {
   align-items: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -872,8 +925,8 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pb-72 {
-  padding-bottom: 18rem;
+.pb-48 {
+  padding-bottom: 12rem;
 }
 
 .pt-2 {
@@ -1036,6 +1089,12 @@ html {
   fill: #581C87;
 }
 
+@media (min-width: 640px) {
+  .sm\:mt-\[400px\] {
+    margin-top: 400px;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:left-12 {
     left: 3rem;
@@ -1059,6 +1118,10 @@ html {
 
   .md\:mt-5 {
     margin-top: 1.25rem;
+  }
+
+  .md\:mt-\[500px\] {
+    margin-top: 500px;
   }
 
   .md\:block {
@@ -1087,6 +1150,15 @@ html {
 
   .md\:w-\[400px\] {
     width: 400px;
+  }
+
+  .md\:max-w-full {
+    max-width: 100%;
+  }
+
+  .md\:max-w-fit {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
   }
 
   .md\:flex-row {
@@ -1187,14 +1259,6 @@ html {
 
   .lg\:flex-row {
     flex-direction: row;
-  }
-
-  .lg\:flex-col {
-    flex-direction: column;
-  }
-
-  .lg\:flex-nowrap {
-    flex-wrap: nowrap;
   }
 
   .lg\:gap-4 {
