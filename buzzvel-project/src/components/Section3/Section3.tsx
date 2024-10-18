@@ -6,7 +6,7 @@ type Section3Props = unknown;
 const Section3: React.FC<Section3Props> = () => {
   return (
     <div id="services" className="relative flex flex-col md:flex-row-reverse md:justify-end items-start gap-16 mt-[300px] sm:mt-[400px] md:mt-[500px]">
-      <div className="flex flex-col w-full md:w-4/5">
+      <div className="flex flex-col items-center md:items-start w-full md:w-4/5">
         <Title
           subtitle="Services"
           title="Personalized services"

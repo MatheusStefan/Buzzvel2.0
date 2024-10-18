@@ -5,8 +5,8 @@ type Section4Props = unknown
 
 const Section4: React.FC<Section4Props> = () => {
     return (
-      <div className="relative flex flex-col md:flex-row md:justify-end items-end gap-16 md:mt-50">
-      <div className="flex flex-col w-full md:w-4/5">
+      <div className="relative flex flex-col md:flex-row md:justify-end items-end gap-16 md:my-[50px]">
+      <div className="flex flex-col items-center md:items-start md:ml-6 w-full md:w-4/5">
         <Title
           subtitle="Services"
           title="Personalized services"
@@ -15,7 +15,7 @@ const Section4: React.FC<Section4Props> = () => {
           alignmentMd="left"
         />
         <div className="flex flex-row justify-around md:justify-start flex-wrap w-full mt-10 gap-10">
-          <div className="flex flex-col w-2/5 ml-2 pt-4">
+          <div className="flex flex-col w-2/5 pt-4">
             <p className="font-bold text-xl">Et mauris</p>
             <span className="leading-4 pt-3">
               Posuere quis sed mauris non curabitur pretium elementum eget.
@@ -23,21 +23,21 @@ const Section4: React.FC<Section4Props> = () => {
             </span>
           </div>
 
-          <div className="flex flex-col w-2/5 ml-2 pt-4">
+          <div className="flex flex-col w-2/5 pt-4">
             <p className="font-bold text-xl">Eget sit</p>
             <span className="leading-4 pt-3">
               Sit bibendum donec dolor fames neque vulputate non sit aliquam.
               Consequat turpis natoque leo, massa.{" "}
             </span>
           </div>
-          <div className="flex flex-col w-2/5 ml-2 pt-4">
+          <div className="flex flex-col w-2/5 pt-4">
             <p className="font-bold text-xl">Imperdiet pellentesque</p>
             <span className="leading-4 pt-3">
               Platea arcu dapibus non magna cursus lectus id sollicitudin. Enim
               viverra parturient tristique nulla.
             </span>
           </div>
-          <div className="flex flex-col w-2/5 ml-2 pt-4">
+          <div className="flex flex-col w-2/5 pt-4">
             <p className="font-bold text-xl">Non libero</p>
             <span className="leading-4 pt-3">
               Congue mauris sem vel, urna viverra. Urna, nibh leo suscipit purus
