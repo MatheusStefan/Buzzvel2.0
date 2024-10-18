@@ -12,6 +12,7 @@ function App() {
     <div className="flex flex-col items-center justify-center">
       <Header />
       <Section1 />
+      <Section2 />
     </div>
   );
 }

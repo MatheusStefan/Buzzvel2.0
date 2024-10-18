@@ -19,6 +19,7 @@ export default {
       'light-grey': "#475569",
       'black': "#000",
       'dark-blue': "#0F172A",
+      'orange': "#D97706",
     }
   },
   plugins: [],

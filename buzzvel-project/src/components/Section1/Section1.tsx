@@ -25,7 +25,7 @@ const Section1: React.FC<Section1> = () => {
               viverra orci dui consequat turpis scelerisque.
             </p>
             <Button text="Request a Quote" />
-            <div className="mt-8">
+            <div className="mt-8 mb-12">
               <p className="my-4">
                 “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus
                 viverra orci dui consequat turpis scelerisque faucibus.”
