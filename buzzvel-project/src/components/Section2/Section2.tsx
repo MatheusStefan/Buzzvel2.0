@@ -1,27 +1,26 @@
 import React from "react";
+import Title from "../Title/Title";
 
 type Section2Props = unknown;
 
 const Section2: React.FC<Section2Props> = () => {
   return (
-    <div className="flex flex-col mt-5 h-fit w-full">
-      <div className="flex flex-col items-center justify-center m-4 text-center">
-        <p className="font-roboto text-orange font-medium">No more waste</p>
-        <h2 className="font-roboto text-[32px] font-bold m-0">Pick the Sun</h2>
-        <p className="font-roboto text-dark-blue font-normal">
-          Et pulvinar nec interdum integer id urna molestie porta nullam. A,
+    <div className="relative w-full mt-5 h-auto pb-72">
+      <Title
+        subtitle="No more waste"
+        title="Pick the Sun"
+        content="Et pulvinar nec interdum integer id urna molestie porta nullam. A,
           donec ornare sed turpis pulvinar purus maecenas quam a. Erat porttitor
-          pharetra sed in mauris elementum sollicitudin.
-        </p>
-      </div>
-      <div className="mt-8 relative">
+          pharetra sed in mauris elementum sollicitudin."
+      />
+      <div className="absolute top-[200px] w-full h-auto z-0">
         <svg
           width="502"
           height="711"
           viewBox="0 0 502 711"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute w-[100px] md:w-[200px] h-[250px] md:h-[350px] object-cover object-right overflow-hidden z-0"
+          className="absolute w-[100px] md:w-[200px] lg:w-[400px] h-[250px] md:h-[350px] object-cover object-right z-0"
         >
           <ellipse cx="147" cy="355.5" rx="355" ry="355.5" fill="#F59E0B" />
         </svg>
@@ -31,7 +30,7 @@ const Section2: React.FC<Section2Props> = () => {
           viewBox="0 0 558 597"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute top-[30px] md:top-60 lg:top-60 right-0 w-[50px] md:w-[200px] h-[200px] lg:h-[400px] object-cover object-left overflow-hidden z-0"
+          className="absolute top-[30px] md:top-60 lg:top-60 right-0 w-[50px] md:w-[200px] lg:w-[400px] h-[200px] lg:h-[400px] object-cover"
         >
           <ellipse
             cx="298"
@@ -46,7 +45,7 @@ const Section2: React.FC<Section2Props> = () => {
           viewBox="0 0 1560 904"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute top-[120px] max-w-5xl w-full object-cover z-0 left-1/2 transform -translate-x-1/2"
+          className="absolute top-[120px] lg:max-w-4xl w-full object-cover left-1/2 transform -translate-x-1/2"
         >
           <g filter="url(#filter0_dd_1_90)">
             <g clip-path="url(#clip0_1_90)">

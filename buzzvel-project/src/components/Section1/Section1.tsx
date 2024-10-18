@@ -16,7 +16,7 @@ const Section1: React.FC<Section1> = () => {
               className="object-cover w-[307px] md:w-[400px] lg:w-[673px] object-center"
             />
           </div>
-          <div className="flex flex-col mx-4 text-center items-center justify-center mx-1 mt-80 md:mt-0 md:items-start md:w-[350px] lg:w-[300px] md:m-4 lg:mx-14 xl:mx-[140px] 2xl:mx-[270px]">
+          <div className="flex flex-col mx-4 text-center items-center justify-center mx-1 mt-80 md:mt-0 md:items-center md:w-[350px] lg:w-[300px] md:m-4 lg:mx-14 xl:mx-[140px] 2xl:mx-[270px]">
             <h1 className="font-roboto font-bold text-[40px] md:text-[50px] text-center md:text-start leading-10 mb-6 leading-[50px] font-extrabold">
               Get the Sun to Power Your Home
             </h1>
