@@ -8,14 +8,14 @@ type TitleProps = {
 
 const Title: React.FC<TitleProps> = ({subtitle, title, content}) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center md:items-start">
       <p className="font-roboto md:text-[32px] lg:text-[36px] text-orange font-medium">
         {subtitle}
       </p>
       <h2 className="font-roboto text-[32px] md:text-[64px] lg:text-[72px] font-bold m-0">
         {title}
       </h2>
-      <p className="font-roboto m-2">
+      <p className="font-roboto m-2 text-center">
         {content}
       </p>
     </div>

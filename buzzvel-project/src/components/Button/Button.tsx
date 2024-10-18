@@ -29,6 +29,8 @@ const Button: React.FC<ButtonProps> = ({ text }) => {
     group
     shadow-custom
     w-fit
+    gap-4
+    font-roboto
 "
     >
       {text}

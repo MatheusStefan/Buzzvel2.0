@@ -20,13 +20,13 @@ const Section1: React.FC<Section1> = () => {
             <h1 className="font-roboto font-bold text-[40px] md:text-[50px] text-center md:text-start leading-10 mb-6 leading-[50px] font-extrabold">
               Get the Sun to Power Your Home
             </h1>
-            <p className="mb-6 w-fit">
+            <p className="font-roboto mb-6 w-fit">
               Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus
               viverra orci dui consequat turpis scelerisque.
             </p>
             <Button text="Request a Quote" />
             <div className="mt-8 mb-12">
-              <p className="my-4">
+              <p className="font-roboto my-4">
                 “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus
                 viverra orci dui consequat turpis scelerisque faucibus.”
               </p>
