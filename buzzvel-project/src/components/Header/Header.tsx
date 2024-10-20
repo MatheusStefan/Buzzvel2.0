@@ -5,30 +5,34 @@ type HeaderProps = unknown;
 
 const Header: React.FC<HeaderProps> = () => {
   return (
-    <div className="font-roboto z-20 flex flex-row items-center justify-between md:justify-around w-full md:m-4">
-      <ul className="flex md:gap-[12px] lg:gap-[24px] items-center ml-4">
-        <p id="home" className="font-bold text-[32px] flex">soller</p>
-        <li className="hidden md:block pt-2 hover:text-mid-yellow font-medium transition-all duration-300">
-          <a href="#products" rel="noopener noreferrer">
-            Products
-          </a>
-        </li>
-        <li className="hidden md:block pt-2 hover:text-mid-yellow font-medium transition-all duration-300">
-          <a href="#solutions" rel="noopener noreferrer">
-            Solutions
-          </a>
-        </li>
-        <li className="hidden md:block pt-2 hover:text-mid-yellow font-medium transition-all duration-300">
-          <a href="#services" rel="noopener noreferrer">
-            Services
-          </a>
-        </li>
-        <li className="hidden md:block pt-2 hover:text-mid-yellow font-medium transition-all duration-300">
-          <a href="#configure" rel="noopener noreferrer">
-            Configure
-          </a>
-        </li>
-      </ul>
+    <header className="font-roboto z-20 flex flex-row items-center justify-between md:justify-around w-full md:mt-4 md:mb-10">
+      <nav>
+        <ul className="flex md:gap-[12px] lg:gap-[24px] items-center ml-4">
+          <p id="home" className="font-bold text-[32px] flex">
+            soller
+          </p>
+          <li className="hidden md:block pt-2 hover:text-mid-yellow font-medium transition-all duration-300">
+            <a href="#products" rel="noopener noreferrer" aria-label="Products">
+              Products
+            </a>
+          </li>
+          <li className="hidden md:block pt-2 hover:text-mid-yellow font-medium transition-all duration-300">
+            <a href="#solutions" rel="noopener noreferrer" aria-label="Solutions">
+              Solutions
+            </a>
+          </li>
+          <li className="hidden md:block pt-2 hover:text-mid-yellow font-medium transition-all duration-300">
+            <a href="#services" rel="noopener noreferrer" aria-label="Services">
+              Services
+            </a>
+          </li>
+          <li className="hidden md:block pt-2 hover:text-mid-yellow font-medium transition-all duration-300">
+            <a href="#configure" rel="noopener noreferrer" aria-label="Configure">
+              Configure
+            </a>
+          </li>
+        </ul>
+      </nav>
       <div className="hidden md:flex lg:flex-row items-center md:gap-1 lg:gap-4 xl:gap-10">
         <div className="flex p-1 md:pb-2.5 md:flex-col items-start md:items-center w-fit group">
           <svg
@@ -53,9 +57,16 @@ const Header: React.FC<HeaderProps> = () => {
             555 818 282
           </a>
         </div>
-        <Button text="Request a Quote" bgColor={""} borderColor="#581C87" textColor="#581C87" colorToChange="#FCD34D"/>
+        <Button
+          text="Request a Quote"
+          bgColor={""}
+          borderColor="#581C87"
+          textColor="#581C87"
+          colorToChange="#FCD34D"
+          ariaLabel="Request a Quote"
+        />
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -8,6 +8,7 @@ type ButtonProps = {
   colorToChange?: string;
   orientation?: string;
   onClick?: () => void;
+  ariaLabel?: string;
 };
 
 const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
@@ -17,7 +18,8 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
   bgColor,
   colorToChange,
   orientation = "0",
-  onClick
+  onClick,
+  ariaLabel
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -34,6 +36,7 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
         color: isHovered ? colorToChange : textColor,
         borderColor: borderColor,
       }}
+      aria-label={ariaLabel}
       className={`
         w-[306px] 
         h-[64px] 

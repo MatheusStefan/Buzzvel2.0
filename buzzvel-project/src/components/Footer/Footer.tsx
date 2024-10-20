@@ -4,10 +4,10 @@ type FooterProps = unknown;
 
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <div className="flex flex-col bg-white md:flex-row items-center justify-between w-full p-5 gap-6 z-20">
+    <footer className="flex flex-col bg-white md:flex-row items-center justify-between w-full p-5 gap-6 z-20">
       <div className="flex flex-col md:flex-row items-center gap-4">
-        <a href="#home">
-          <img src="src/assets/Logo-grey.png" alt="" />
+        <a href="#home"aria-label="Soller logo">
+          <img src="assets/Logo-grey.png" alt="" />
         </a>
         <p>@ 2023 Soller, Inc. All rights reserved.</p>
       </div>
@@ -37,7 +37,7 @@ const Footer: React.FC<FooterProps> = () => {
           </a>
         </li>
       </ul>
-    </div>
+    </footer>
   );
 };
 

@@ -5,7 +5,7 @@ type Section3Props = unknown;
 
 const Section3: React.FC<Section3Props> = () => {
   return (
-    <div id="services" className="relative flex flex-col md:flex-row-reverse md:justify-end items-start gap-16 mt-[300px] sm:mt-[400px] md:mt-[600px]">
+    <section id="services" className="relative flex flex-col md:flex-row-reverse md:justify-end items-start gap-16 mt-[300px] sm:mt-[400px] md:mt-[600px]">
       <div className="flex flex-col items-center md:items-start w-full md:w-4/5">
         <Title
           subtitle="Services"
@@ -48,17 +48,17 @@ const Section3: React.FC<Section3Props> = () => {
       </div>
       <div className="relative flex justify-start items-center my-8">
         <img
-          src="/src/assets/Group 60.svg"
+          src="assets/Group 60.svg"
           className="w-m-4/5 h-auto object-cover z-0"
           alt="purple organic shape"
         ></img>
         <img
-          src="/src/assets/Phone.svg"
+          src="assets/Phone.svg"
           className="w-m-4/5 h-auto object-cover z-10 absolute left-10 md:left-12 top-5"
           alt="smartphone example"
         ></img>
       </div>
-    </div>
+    </section>
   );
 };
 

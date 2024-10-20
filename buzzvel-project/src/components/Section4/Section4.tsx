@@ -48,12 +48,12 @@ const Section4: React.FC<Section4Props> = () => {
       </div>
       <div className="relative flex justify-end items-center my-8">
         <img
-          src="/src/assets/Rectangle 16.svg"
+          src="assets/Rectangle 16.svg"
           className="w-4/5 md:w-full flex object-cover z-0"
           alt="yellow organic shape"
         ></img>
         <img
-          src="/src/assets/Mobile-App-Placeholder-2.svg"
+          src="assets/Mobile-App-Placeholder-2.svg"
           className="w-3/5 md:w-4/5 h-auto object-cover z-10 absolute right-0 top-20 md:top-40"
           alt="smartphone example"
         ></img>

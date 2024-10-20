@@ -86,6 +86,7 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
           colorToChange="#78350F"
           orientation="180"
           onClick={handlePrev}
+          ariaLabel="arrow-left"
         />
         <Button
           text=""
@@ -94,6 +95,7 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
           borderColor="#FCD34D"
           colorToChange="#78350F"
           onClick={handleNext}
+          ariaLabel="arrow-right"
         />
       </div>
     </>
