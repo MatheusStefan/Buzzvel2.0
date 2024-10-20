@@ -6,14 +6,18 @@ type ButtonProps = {
   borderColor?: string;
   bgColor: string;
   colorToChange?: string;
+  orientation?: string;
+  onClick?: () => void;
 };
 
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
   text,
   textColor = "purple",
   borderColor = "purple",
   bgColor,
-  colorToChange
+  colorToChange,
+  orientation = "0",
+  onClick
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -24,6 +28,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
       style={{
         backgroundColor: isHovered ? textColor : bgColor,
         color: isHovered ? colorToChange : textColor,
@@ -61,6 +66,7 @@ const Button: React.FC<ButtonProps> = ({
         xmlns="http://www.w3.org/2000/svg"
         style={{
           fill: isHovered ? colorToChange : textColor,
+          transform: `rotate(${orientation}deg)`
         }}
         className="transition-all duration-300 align-middle mt-1"
       >

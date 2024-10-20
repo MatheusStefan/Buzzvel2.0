@@ -3,4 +3,5 @@ export interface User {
   userPhoto: string;
   userName: string;
   userDetails: string;
+  alt?: string;
 }

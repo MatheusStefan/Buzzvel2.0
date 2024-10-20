@@ -1,7 +1,8 @@
 import React from "react";
 import Title from "../Title/Title";
 import Button from "../Button/Button";
-import Card from "../Card/Card";
+import Carrousel from "../Carrousel/Carrousel";
+import { users } from "../../data/users";
 
 type Section5Props = unknown;
 
@@ -9,7 +10,7 @@ const Section5: React.FC<Section5Props> = () => {
   return (
     <div
       id="configure"
-      className="bg-purple w-full h-auto py-20 px-4 flex flex-col items-center justify-center md:justify-start"
+      className="bg-purple w-full h-auto py-20 pl-4 flex flex-col items-center justify-center md:justify-start"
     >
       <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between w-full">
         <Title
@@ -26,16 +27,8 @@ const Section5: React.FC<Section5Props> = () => {
           colorToChange="#78350F"
         />
       </div>
-      <div className="flex flex-col md:flex-row justify-end md:justify-evenly gap-4 w-fit h-auto z-10 mt-6">
-        <Card
-          user={{
-            quote:
-              "“Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.",
-            userPhoto: "Rwanda Melflor",
-            userName: "Rwanda Melflor",
-            userDetails: "zerowaste.com",
-          }}
-        />
+      <div className="flex flex-col justify-end md:justify-start gap-4 overflow-x-auto w-full h-auto mt-6">
+        <Carrousel users={users} />
       </div>
     </div>
   );

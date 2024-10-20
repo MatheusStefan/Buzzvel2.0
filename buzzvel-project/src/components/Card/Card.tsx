@@ -1,19 +1,19 @@
-import React from "react";
+import { forwardRef } from "react";
 import { User } from "../../types/userTypes";
 
 type CardProps = {
   user: User;
 };
 
-const Card: React.FC<CardProps> = ({ user }) => {
+const Card = forwardRef<HTMLDivElement, CardProps>(({ user }, ref) => {
   return (
-    <div className="flex pb-2 items-center p-4 justify-start w-full md:w-[320px] md:h-[400px] bg-white rounded-xl">
-      <div className="flex flex-col md:flex-row ml-4">
-        <p className="font-roboto mb-6 w-fit text-start">
+    <div ref={ref} className="flex pb-4 items-end p-4 justify-center w-[280px] md:w-[310px] lg:w-[364px] h-[359px] md:h-[442px] bg-white rounded-xl">
+      <div className="flex flex-col ml-4">
+        <p className="font-roboto mb-2 md:mb-20 w-fit text-start">
           {`"${user.quote}"`}
         </p>
         <div className="flex justify-start items-center gap-4">
-          <img src={`src/assets/${user.userPhoto}.png`} alt="women smiling" />
+          <img src={`/src/assets/${user.userPhoto}.png`} alt={user.alt} />
           <div>
             <p className="text-black text-dark-blue font-normal text-lg">
               {user.userName}
@@ -24,6 +24,6 @@ const Card: React.FC<CardProps> = ({ user }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Card;
