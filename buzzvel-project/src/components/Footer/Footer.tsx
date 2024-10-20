@@ -4,7 +4,7 @@ type FooterProps = unknown;
 
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between w-full m-5 px-5 gap-6">
+    <div className="flex flex-col bg-white md:flex-row items-center justify-between w-full p-5 gap-6 z-20">
       <div className="flex flex-col md:flex-row items-center gap-4">
         <a href="#home">
           <img src="src/assets/Logo-grey.png" alt="" />
@@ -15,7 +15,7 @@ const Footer: React.FC<FooterProps> = () => {
         <li>
           <a
             href="#"
-            className="hover:text-dark-yellow transition-all duration-300"
+            className="hover:text-mid-yellow transition-all duration-300"
           >
             Terms
           </a>
@@ -23,7 +23,7 @@ const Footer: React.FC<FooterProps> = () => {
         <li>
           <a
             href="#"
-            className="hover:text-dark-yellow transition-all duration-300"
+            className="hover:text-mid-yellow transition-all duration-300"
           >
             Privacy
           </a>
@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = () => {
         <li>
           <a
             href="#"
-            className="hover:text-dark-yellow transition-all duration-300"
+            className="hover:text-mid-yellow transition-all duration-300"
           >
             Support
           </a>

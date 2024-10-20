@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 type ButtonProps = {
-  text: string;
+  text?: string;
   textColor?: string;
   borderColor?: string;
   bgColor: string;
@@ -11,7 +11,7 @@ type ButtonProps = {
 };
 
 const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
-  text,
+  text = "Request a Quote",
   textColor = "purple",
   borderColor = "purple",
   bgColor,
@@ -54,7 +54,7 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
         w-fit
         gap-4
         font-roboto
-        mt-6
+        z-20
       `}
     >
       {text}

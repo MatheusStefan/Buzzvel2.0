@@ -20,6 +20,10 @@ const Section1: React.FC<Section1> = () => {
             <h1 className="font-roboto font-bold text-[40px] md:text-[50px] text-center md:text-start leading-10 mb-6 leading-[50px] font-extrabold">
               Get the Sun to Power Your Home
             </h1>
+            <p className="my-6 leading-7">
+              “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus
+              viverra orci dui consequat turpis scelerisque faucibus.
+            </p>
             <Button
               text="Request a Quote"
               textColor="#581C87"
@@ -27,7 +31,7 @@ const Section1: React.FC<Section1> = () => {
               borderColor="#581C87"
               bgColor=""
             />
-            <div className="mt-8 mb-12">
+            <div className="mb-12">
               <Card
                 user={{
                   quote:

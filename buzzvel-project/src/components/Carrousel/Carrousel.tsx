@@ -77,7 +77,7 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
           /
         </div>
       </div>
-      <div className="flex gap-4 items-start justify-start z-10">
+      <div className="flex gap-4 mt-6 items-start justify-start z-10">
         <Button
           text=""
           bgColor=""

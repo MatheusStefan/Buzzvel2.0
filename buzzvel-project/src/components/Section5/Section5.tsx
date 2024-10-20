@@ -10,9 +10,9 @@ const Section5: React.FC<Section5Props> = () => {
   return (
     <div
       id="configure"
-      className="bg-purple w-full h-auto py-20 pl-4 flex flex-col items-center justify-center md:justify-start"
+      className="bg-purple w-full h-auto pt-20 pb-40 pl-4 flex flex-col items-center justify-center md:justify-start"
     >
-      <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between w-full">
+      <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between pr-6 gap-6">
         <Title
           subtitle="Join other Sun harvesters"
           title="Make something awesome"
@@ -27,7 +27,7 @@ const Section5: React.FC<Section5Props> = () => {
           colorToChange="#78350F"
         />
       </div>
-      <div className="flex flex-col justify-end md:justify-start gap-4 overflow-x-auto w-full h-auto mt-6">
+      <div className="flex flex-col justify-end md:justify-start gap-4 overflow-x-auto w-full h-auto mt-10">
         <Carrousel users={users} />
       </div>
     </div>
