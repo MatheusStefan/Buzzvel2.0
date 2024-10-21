@@ -1,11 +1,8 @@
 import React from "react";
-import { useDarkMode } from "../Context/DarkModeProvider";
 
 type FooterProps = unknown;
 
 const Footer: React.FC<FooterProps> = () => {
-  const { darkMode } = useDarkMode();
-
   return (
     <footer className="flex flex-col md:flex-row items-center justify-between w-full p-5 gap-6 z-20">
       <div className="flex flex-col md:flex-row items-center gap-4">
