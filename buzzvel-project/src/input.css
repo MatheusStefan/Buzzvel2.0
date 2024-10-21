@@ -8,11 +8,17 @@ html {
   font-family: 'Roboto';
   font-display: swap;
 
-  background-color: #fff;
-  color: #000;
 }
 
-html.dark {
-  background-color: #000;
-  color: #fff;
+body {
+  .dark {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .light {
+    background-color: #fff;
+    color: #000;
+
+  }
 }

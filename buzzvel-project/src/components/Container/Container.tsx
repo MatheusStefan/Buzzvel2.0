@@ -1,7 +1,6 @@
 import React from "react";
 import Title from "../Title/Title";
 import Button from "../Button/Button";
-
 type ContainerProps = unknown;
 
 const Container: React.FC<ContainerProps> = () => {

@@ -47,7 +47,10 @@ const Section4: React.FC<Section4Props> = () => {
           </div>
         </div>
       </div>
-      <div className="relative flex justify-end items-center my-8">
+      <div
+
+        className="relative flex justify-end items-center my-8"
+      >
         <img
           src="assets/Rectangle 16.svg"
           className="w-4/5 md:w-full flex object-cover z-0"

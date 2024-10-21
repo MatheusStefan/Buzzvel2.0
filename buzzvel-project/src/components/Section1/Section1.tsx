@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import Card from "../Card/Card";
+import { motion } from "framer-motion";
 
 type Section1 = unknown;
 
@@ -16,9 +17,17 @@ const Section1: React.FC<Section1> = () => {
               className="object-cover w-[307px] md:w-[400px] object-center z-0"
             />
           </div>
-          <div className="flex flex-col mx-4 items-center justify-center mt-80 md:mt-0 md:items-start md:w-[350px] lg:w-[500px] md:m-4 lg:mx-14 xl:mx-[140px] 2xl:mx-[270px] z-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 3 } }}
+            className="flex flex-col mx-4 items-center justify-center mt-80 md:mt-0 md:items-start md:w-[350px] lg:w-[500px] md:m-4 lg:mx-14 xl:mx-[140px] 2xl:mx-[270px] z-20"
+          >
             <h1 className="font-roboto font-bold text-[40px] md:text-[50px] text-center md:text-start leading-10 mb-6 leading-[50px] font-extrabold">
-              Get the Sun to Power Your Home
+              Get the{" "}
+              <b className="hover:text-mid-yellow transition-all duration-300 cursor-default">
+                Sun
+              </b>{" "}
+              to Power Your Home
             </h1>
             <p className="my-6 leading-7">
               “Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus
@@ -44,7 +53,7 @@ const Section1: React.FC<Section1> = () => {
                 }}
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

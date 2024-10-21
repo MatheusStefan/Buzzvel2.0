@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { motion } from 'framer-motion';
+import { ThemeContext } from "../Context/ThemeContext";
 
 type ButtonToggleProps = unknown;
 
 const ButtonToggle: React.FC<ButtonToggleProps> = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
-
-  const toggleSwitch = () => setDarkMode(!darkMode);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   const spring = {
     type: "spring",
@@ -23,15 +14,15 @@ const ButtonToggle: React.FC<ButtonToggleProps> = () => {
   };
   return (
     <div
-      className={`w-[70px] h-[40px] ${darkMode ? "bg-white" : "bg-black"} flex ${
-        darkMode ? "justify-end" : "justify-start"
+      className={`w-[70px] h-[40px] ${theme === 'light' ? "bg-black" : "bg-white"} flex ${
+        theme === 'dark' ? "justify-end" : "justify-start"
       } rounded-[50px] p-[10px] cursor-pointer z-10`}
-      onClick={toggleSwitch}
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
       <motion.div
         layout
         transition={spring}
-        className={`w-[20px] h-[20px] ${darkMode ? "bg-black" : "bg-white"} rounded-full z-20`}
+        className={`w-[20px] h-[20px] ${theme === 'light' ? "bg-white" : "bg-black"} rounded-full z-20`}
       />
     </div>
   );
