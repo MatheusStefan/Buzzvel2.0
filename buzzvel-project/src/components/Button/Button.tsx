@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
   colorToChange,
   orientation = "0",
   onClick,
-  ariaLabel
+  ariaLabel,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -37,7 +37,7 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
         borderColor: borderColor,
       }}
       aria-label={ariaLabel}
-      className={`
+      className="
         w-[306px] 
         h-[64px] 
         px-[24px] 
@@ -58,7 +58,7 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
         gap-4
         font-roboto
         z-20
-      `}
+      "
     >
       {text}
       <svg

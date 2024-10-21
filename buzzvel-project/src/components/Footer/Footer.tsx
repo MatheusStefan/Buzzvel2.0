@@ -1,13 +1,20 @@
 import React from "react";
+import { useDarkMode } from "../Context/DarkModeProvider";
 
 type FooterProps = unknown;
 
 const Footer: React.FC<FooterProps> = () => {
+  const { darkMode } = useDarkMode();
+
   return (
-    <footer className="flex flex-col bg-white md:flex-row items-center justify-between w-full p-5 gap-6 z-20">
+    <footer className="flex flex-col md:flex-row items-center justify-between w-full p-5 gap-6 z-20">
       <div className="flex flex-col md:flex-row items-center gap-4">
-        <a href="#home"aria-label="Soller logo">
-          <img src="assets/Logo-grey.png" alt="" />
+        <a
+          href="#home"
+          aria-label="Soller logo"
+          className="font-bold text-[32px] flex dark:text-white"
+        >
+          soller
         </a>
         <p>@ 2023 Soller, Inc. All rights reserved.</p>
       </div>

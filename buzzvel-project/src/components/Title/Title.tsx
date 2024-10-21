@@ -21,7 +21,7 @@ const Title: React.FC<TitleProps> = ({
     <div
       className="w-full md:w-1/2 flex flex-col items-center md:items-start z-20"
     >
-      <p className="font-roboto md:text-[18px] lg:text-[30px] leading-5 text-center md:text-start text-orange font-medium">
+      <p className={`font-roboto md:text-[18px] lg:text-[30px] leading-5 text-center md:text-start text-orange font-medium`}>
         {subtitle}
       </p>
       <h2

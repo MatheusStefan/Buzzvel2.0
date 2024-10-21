@@ -13,6 +13,7 @@ const Section4: React.FC<Section4Props> = () => {
           content="Pretium lectus ultrices sit tempor, sit ullamcorper volutpat et et. Auctor turpis semper id sit ornare maecenas lectus sed."
           alignment="center"
           alignmentMd="left"
+          titleColor=""
         />
         <div className="flex flex-row justify-around md:justify-start flex-wrap w-full mt-10 gap-10">
           <div className="flex flex-col w-2/5 pt-4">

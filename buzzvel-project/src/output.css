@@ -631,6 +631,11 @@ video {
   margin-right: 1rem;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -648,10 +653,6 @@ video {
 
 .mb-10 {
   margin-bottom: 2.5rem;
-}
-
-.mb-12 {
-  margin-bottom: 3rem;
 }
 
 .mb-2 {
@@ -672,10 +673,6 @@ video {
 
 .ml-4 {
   margin-left: 1rem;
-}
-
-.mr-0 {
-  margin-right: 0px;
 }
 
 .mr-4 {
@@ -718,12 +715,20 @@ video {
   display: none;
 }
 
+.h-\[20px\] {
+  height: 20px;
+}
+
 .h-\[300px\] {
   height: 300px;
 }
 
 .h-\[359px\] {
   height: 359px;
+}
+
+.h-\[40px\] {
+  height: 40px;
 }
 
 .h-\[600px\] {
@@ -767,6 +772,10 @@ video {
   width: 80%;
 }
 
+.w-\[20px\] {
+  width: 20px;
+}
+
 .w-\[250px\] {
   width: 250px;
 }
@@ -785,6 +794,10 @@ video {
 
 .w-\[307px\] {
   width: 307px;
+}
+
+.w-\[70px\] {
+  width: 70px;
 }
 
 .w-fit {
@@ -808,6 +821,10 @@ video {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .resize {
@@ -891,6 +908,14 @@ video {
   border-radius: 100px;
 }
 
+.rounded-\[50px\] {
+  border-radius: 50px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -907,6 +932,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -929,6 +959,15 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-\[10px\] {
+  padding: 10px;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .px-\[24px\] {
@@ -987,6 +1026,10 @@ video {
 
 .font-roboto {
   font-family: Roboto, sans-serif;
+}
+
+.font-\[\] {
+  font-family: ;
 }
 
 .text-\[24px\] {
@@ -1061,11 +1104,6 @@ video {
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
-.text-light-blue {
-  --tw-text-opacity: 1;
-  color: rgb(3 105 161 / var(--tw-text-opacity));
-}
-
 .text-light-grey {
   --tw-text-opacity: 1;
   color: rgb(71 85 105 / var(--tw-text-opacity));
@@ -1091,6 +1129,14 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1105,6 +1151,13 @@ html {
   scroll-behavior: smooth;
   font-family: 'Roboto';
   font-display: swap;
+  background-color: #fff;
+  color: #000;
+}
+
+html.dark {
+  background-color: #000;
+  color: #fff;
 }
 
 .hover\:text-mid-yellow:hover {
@@ -1118,6 +1171,11 @@ html {
 
 .group:hover .group-hover\:fill-purple {
   fill: #581C87;
+}
+
+.dark\:text-white:is([data-mode="dark"] *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -1151,10 +1209,6 @@ html {
     margin: 1rem;
   }
 
-  .md\:mb-10 {
-    margin-bottom: 2.5rem;
-  }
-
   .md\:mb-20 {
     margin-bottom: 5rem;
   }
@@ -1167,16 +1221,12 @@ html {
     margin-left: 1.5rem;
   }
 
-  .md\:mr-1 {
-    margin-right: 0.25rem;
-  }
-
   .md\:mt-0 {
     margin-top: 0px;
   }
 
-  .md\:mt-4 {
-    margin-top: 1rem;
+  .md\:mt-6 {
+    margin-top: 1.5rem;
   }
 
   .md\:mt-8 {
@@ -1269,10 +1319,6 @@ html {
     align-items: flex-start;
   }
 
-  .md\:items-center {
-    align-items: center;
-  }
-
   .md\:justify-start {
     justify-content: flex-start;
   }
@@ -1283,10 +1329,6 @@ html {
 
   .md\:justify-between {
     justify-content: space-between;
-  }
-
-  .md\:justify-around {
-    justify-content: space-around;
   }
 
   .md\:justify-evenly {
@@ -1335,6 +1377,10 @@ html {
   .lg\:mx-14 {
     margin-left: 3.5rem;
     margin-right: 3.5rem;
+  }
+
+  .lg\:mt-4 {
+    margin-top: 1rem;
   }
 
   .lg\:w-\[364px\] {

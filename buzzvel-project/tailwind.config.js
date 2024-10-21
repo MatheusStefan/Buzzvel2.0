@@ -24,5 +24,6 @@ export default {
       "orange": "#D97706",
     },
   },
+  darkMode: ['class', '[data-mode="dark"]'],
   plugins: [],
 };

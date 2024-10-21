@@ -7,20 +7,22 @@ import Section3 from "./components/Section3/Section3";
 import Section4 from "./components/Section4/Section4";
 import Section5 from "./components/Section5/Section5";
 import { Helmet } from "react-helmet";
-
+import { DarkModeProvider } from "./components/Context/DarkModeProvider";
 
 function App() {
   return (
     <div className="flex flex-col items-center justify-center">
       <Helmet />
-      <Header />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Container />
-      <Footer />
+      <DarkModeProvider>
+        <Header />
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Container />
+        <Footer />
+      </DarkModeProvider>
     </div>
   );
 }

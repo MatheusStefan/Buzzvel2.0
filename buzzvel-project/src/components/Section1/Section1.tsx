@@ -16,9 +16,7 @@ const Section1: React.FC<Section1> = () => {
               className="object-cover w-[307px] md:w-[400px] object-center z-0"
             />
           </div>
-          <div
-            className="flex flex-col mx-4 items-center justify-center mt-80 md:mt-0 md:items-start md:w-[350px] lg:w-[500px] md:m-4 lg:mx-14 xl:mx-[140px] 2xl:mx-[270px] z-20"
-          >
+          <div className="flex flex-col mx-4 items-center justify-center mt-80 md:mt-0 md:items-start md:w-[350px] lg:w-[500px] md:m-4 lg:mx-14 xl:mx-[140px] 2xl:mx-[270px] z-20">
             <h1 className="font-roboto font-bold text-[40px] md:text-[50px] text-center md:text-start leading-10 mb-6 leading-[50px] font-extrabold">
               Get the Sun to Power Your Home
             </h1>
@@ -28,13 +26,13 @@ const Section1: React.FC<Section1> = () => {
             </p>
             <Button
               text="Request a Quote"
+              bgColor=""
+              borderColor="#581C87"
               textColor="#581C87"
               colorToChange="#FCD34D"
-              borderColor="#581C87"
-              bgColor=""
               ariaLabel="Request a Quote"
             />
-            <div className="mb-12">
+            <div className="my-12">
               <Card
                 user={{
                   quote:
@@ -42,7 +40,7 @@ const Section1: React.FC<Section1> = () => {
                   userPhoto: "Rwanda Melflor",
                   userName: "Rwanda Melflor",
                   userDetails: "zerowaste.com",
-                  alt: "user-picture"
+                  alt: "user-picture",
                 }}
               />
             </div>

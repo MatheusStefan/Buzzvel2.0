@@ -16,6 +16,7 @@ const Section2: React.FC<Section2Props> = () => {
           donec ornare sed turpis pulvinar purus maecenas quam a. Erat porttitor
           pharetra sed in mauris elementum sollicitudin."
         alignment="center"
+        titleColor=""
       />
       <div className="absolute bottom-[20px] w-full h-fit z-0">
         <img
