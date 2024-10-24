@@ -1,10 +1,44 @@
-import React from "react";
+import React, { useRef } from "react";
 import Title from "../Title/Title";
-import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
 
 type Section2Props = unknown;
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Section2: React.FC<Section2Props> = () => {
+  const yellowCircleRef = useRef<HTMLImageElement>(null);
+  const purpleCircleRef = useRef<HTMLImageElement>(null);
+  const imagesRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (yellowCircleRef.current) {
+      gsap.to(yellowCircleRef.current, {
+        y: 400,
+        scrollTrigger: {
+          trigger: imagesRef.current,
+          start: "top center",
+          end: "bottom top",
+          scrub: 0.5,
+        },
+      });
+    }
+
+    if (purpleCircleRef.current) {
+      gsap.to(purpleCircleRef.current, {
+        y: -300,
+        scrollTrigger: {
+          trigger: imagesRef.current,
+          start: "top center",
+          end: "bottom top",
+          scrub: 0.5,
+        },
+      });
+    }
+  }, []);
+
   return (
     <section
       id="solutions"
@@ -19,21 +53,21 @@ const Section2: React.FC<Section2Props> = () => {
         alignment="center"
         titleColor=""
       />
-      <div className="absolute bottom-[20px] w-full h-fit z-0">
-        <motion.img
-          whileInView={{ y: 300, transition: { duration: 4 } }}
-          src="assets/Ellipse 14.svg"
+      <div className="absolute bottom-[20px] w-full h-fit z-0" ref={imagesRef}>
+        <img
+          src="assets/yellow-ellipse.svg"
           alt="orange ellipse"
           className="absolute -left-20 -bottom-40 w-[250px] md:w-fit h-[300px] md:h-[350px] object-cover z-0"
-        />
-        <motion.img
-          whileInView={{ y: -50, transition: { duration: 3 } }}
-          src="assets/Ellipse 15.svg"
-          alt="purple ellipse"
-          className="absolute w-1/5 right-0 -bottom-14 md:-bottom-[400px]"
+          ref={yellowCircleRef}
         />
         <img
-          src="assets/Desktop.svg"
+          src="assets/purple-ellipse.svg"
+          alt="purple ellipse"
+          className="absolute w-1/5 right-0 -bottom-14 md:-bottom-[400px]"
+          ref={purpleCircleRef}
+        />
+        <img
+          src="assets/desktop-screen.svg"
           alt="desktop screen"
           className="absolute md:w-3/4 lg:max-w-4xl w-full object-cover left-1/2 transform -translate-x-1/2"
         />

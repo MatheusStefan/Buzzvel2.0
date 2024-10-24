@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Title from "../Title/Title";
 import Button from "../Button/Button";
 import Carrousel from "../Carrousel/Carrousel";
 import { users } from "../../data/users";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 type Section5Props = unknown;
 
 const Section5: React.FC<Section5Props> = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <section
       id="configure"
@@ -20,17 +22,15 @@ const Section5: React.FC<Section5Props> = () => {
           content="Dui euismod iaculis libero, aliquet vitae et elementum porttitor. Eleifend mi tristique condimentum congue fusce nunc, donec magnis commodo."
         />
         <Button
-          text="Request a Quote"
-          textColor="#FCD34D"
-          borderColor="#FCD34D"
-          bgColor=""
-          colorToChange="#78350F"
-          ariaLabel="Request a Quote"
-        />
+              text="Request a Quote"
+              bgColor={theme === "dark" ? "" : ""}
+              borderColor={theme === "dark" ? "#fff" : "#FCD34D"}
+              textColor={theme === "dark" ? "#fff" : "#FCD34D"}
+              colorToChange={theme === "dark" ? "#581C87" : "#78350F"}
+              ariaLabel="Request a Quote"
+            />
       </div>
-      <div className="flex flex-col justify-end md:justify-start gap-4 overflow-x-auto w-full h-auto mt-10">
-        <Carrousel users={users} />
-      </div>
+      <Carrousel users={users} />
     </section>
   );
 };

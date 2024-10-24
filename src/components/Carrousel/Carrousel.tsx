@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Card from "../Card/Card";
 import Button from "../Button/Button";
 import { User } from "../../types/userTypes";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 type CarrouselProps = {
   users: User[];
@@ -15,36 +16,38 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
   const itemsRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardWidth, setCardWidth] = useState(0);
-
-  useEffect(() => {
-    const updateCardWidth = () => {
-      if (cardsRef.current) {
-        const cardSize = cardsRef.current[0]!.getBoundingClientRect().width;
-        setCardWidth(cardSize);
-      }
-    };
-
-    updateCardWidth();
-    window.addEventListener("resize", updateCardWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateCardWidth);
-    };
-  }, []);
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     const carousel = carouselRef.current;
 
-    if (carousel && cardWidth > 0) {
+    if (carousel) {
       gsap.to(carousel, {
-        x: -currentIndex * cardWidth,
+        x: -currentIndex * 266,
         duration: 0.5,
         ease: "power2.inOut",
       });
     }
-  }, [cardWidth, currentIndex]);
-    
+
+    cardsRef.current.forEach((card, index) => {
+      if (card) {
+        if (index === currentIndex) {
+          gsap.to(card, {
+            scale: 1.1,
+            duration: 0.5,
+            ease: "power2.inOut",
+          });
+        } else {
+          gsap.to(card, {
+            scale: 1,
+            duration: 0.5,
+            ease: "power2.inOut",
+          });
+        }
+      }
+    });
+  }, [currentIndex]);
+
   const handleNext = () => {
     if (currentIndex < users.length - 1) {
       setCurrentIndex(currentIndex + 1);
@@ -62,10 +65,10 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
   };
 
   return (
-    <>
-      <div className="flex flex-row w-full justify-start overflow-x-hidden z-20">
-        <div className="flex flex-row justify-start" ref={carouselRef}>
-          <div className="flex gap-x-2" ref={itemsRef}>
+    <div className="flex flex-col items-start justify-between overflow-hidden w-full p-6 mt-10">
+      <div className="flex flex-row justify-start z-10">
+        <div className="flex items-center justify-around" ref={carouselRef}>
+          <div className="flex gap-x-4" ref={itemsRef}>
             {users.map((user, index) => (
               <Card
                 user={user}
@@ -74,15 +77,14 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
               />
             ))}
           </div>
-          /
         </div>
       </div>
-      <div className="flex gap-4 mt-6 items-start justify-start z-10">
+      <div className="flex gap-4 mt-10 items-start justify-start z-10">
         <Button
           text=""
           bgColor=""
-          textColor="#FCD34D"
-          borderColor="#FCD34D"
+          textColor={theme === "dark" ? "#fff" : "#FCD34D"}
+          borderColor={theme === "dark" ? "#fff" : "#FCD34D"}
           colorToChange="#78350F"
           orientation="180"
           onClick={handlePrev}
@@ -91,14 +93,14 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
         <Button
           text=""
           bgColor=""
-          textColor="#FCD34D"
-          borderColor="#FCD34D"
+          textColor={theme === "dark" ? "#fff" : "#FCD34D"}
+          borderColor={theme === "dark" ? "#fff" : "#FCD34D"}
           colorToChange="#78350F"
           onClick={handleNext}
           ariaLabel="arrow-right"
         />
       </div>
-    </>
+    </div>
   );
 };
 

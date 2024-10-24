@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { motion } from 'framer-motion';
-import { ThemeContext } from "../Context/ThemeContext";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 type ButtonToggleProps = unknown;
 

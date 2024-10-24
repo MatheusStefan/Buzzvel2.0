@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../Button/Button";
 import Card from "../Card/Card";
 import { motion } from "framer-motion";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 type Section1 = unknown;
 
 const Section1: React.FC<Section1> = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <>
       <section id="products" className="flex flex-col w-full md:mt-8">
@@ -35,10 +37,10 @@ const Section1: React.FC<Section1> = () => {
             </p>
             <Button
               text="Request a Quote"
-              bgColor=""
+              bgColor={theme === "dark" ? "#581C87" : ""}
               borderColor="#581C87"
-              textColor="#581C87"
-              colorToChange="#FCD34D"
+              textColor={theme === "dark" ? "#fff" : "#581C87"}
+              colorToChange={theme === "dark" ? "#581C87" : "#FCD34D"}
               ariaLabel="Request a Quote"
             />
             <div className="my-12">

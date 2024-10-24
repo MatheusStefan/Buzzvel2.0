@@ -10,10 +10,10 @@ const Card = forwardRef<HTMLDivElement, CardProps>(({ user }, ref) => {
   return (
     <div
       ref={ref}
-      className="flex pb-4 items-end p-4 justify-center w-[280px] md:w-[310px] lg:w-[364px] h-[359px] md:h-[442px] rounded-xl bg-white"
+      className="flex pb-4 items-between justify-center p-4 w-[250px] h-[359px] md:h-[442px] rounded-xl bg-white hover:scale-105 transitions-all duration-300 z-20 cursor-default"
     >
-      <div className="flex flex-col ml-4">
-        <p className="font-roboto mb-2 md:mb-20 w-fit text-start text-black">
+      <div className="flex flex-col justify-between">
+        <p className="font-roboto w-fit text-start text-black">
           {`"${user.quote}"`}
         </p>
         <div className="flex justify-start items-center gap-4">

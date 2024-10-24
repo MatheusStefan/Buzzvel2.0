@@ -8,7 +8,7 @@ import Section4 from "./components/Section4/Section4";
 import Section5 from "./components/Section5/Section5";
 import { Helmet } from "react-helmet";
 import { useContext, useEffect } from "react";
-import { ThemeContext } from "./components/Context/ThemeContext";
+import { ThemeContext } from "./Context/ThemeContext";
 
 function App() {
   const { theme } = useContext(ThemeContext);

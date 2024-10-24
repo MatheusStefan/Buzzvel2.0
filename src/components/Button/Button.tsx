@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 type ButtonProps = {
   text?: string;
@@ -13,8 +14,8 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
   text = "Request a Quote",
-  textColor = "purple",
-  borderColor = "purple",
+  textColor = "#581C87",
+  borderColor = "#581C87",
   bgColor,
   colorToChange,
   orientation = "0",
@@ -22,6 +23,8 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
   ariaLabel,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const { theme } = useContext(ThemeContext);
 
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
@@ -35,6 +38,7 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
         backgroundColor: isHovered ? textColor : bgColor,
         color: isHovered ? colorToChange : textColor,
         borderColor: borderColor,
+        border: `2px solid ${theme === "dark" ? "#581C87" : "#581C87"}`,
       }}
       aria-label={ariaLabel}
       className="
@@ -43,7 +47,6 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
         px-[24px] 
         py-[20px] 
         rounded-[100px]
-        border-2
         opacity-100
         font-bold
         text-[24px]

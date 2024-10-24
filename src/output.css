@@ -655,10 +655,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -669,10 +665,6 @@ video {
 
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
 }
 
 .mr-4 {
@@ -780,10 +772,6 @@ video {
   width: 250px;
 }
 
-.w-\[280px\] {
-  width: 280px;
-}
-
 .w-\[300px\] {
   width: 300px;
 }
@@ -823,24 +811,12 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.cursor-auto {
-  cursor: auto;
-}
-
 .cursor-default {
   cursor: default;
 }
 
-.cursor-text {
-  cursor: text;
-}
-
-.resize {
-  resize: both;
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-row {
@@ -908,12 +884,13 @@ video {
        column-gap: 0.5rem;
 }
 
-.overflow-x-auto {
-  overflow-x: auto;
+.gap-x-4 {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden;
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded-\[100px\] {
@@ -932,8 +909,13 @@ video {
   border-radius: 0.75rem;
 }
 
-.border-2 {
-  border-width: 2px;
+.border {
+  border-width: 1px;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-purple {
@@ -944,11 +926,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -975,6 +952,10 @@ video {
 
 .p-\[10px\] {
   padding: 10px;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-6 {
@@ -1038,10 +1019,6 @@ video {
 
 .font-roboto {
   font-family: Roboto, sans-serif;
-}
-
-.font-\[\] {
-  font-family: ;
 }
 
 .text-\[24px\] {
@@ -1163,13 +1140,23 @@ html {
   scroll-behavior: smooth;
   font-family: 'Roboto';
   font-display: swap;
-  background-color: #fff;
-  color: #000;
 }
 
-html.dark {
-  background-color: #000;
-  color: #fff;
+body {
+  .dark {
+    background-color: #000;
+    color: #fff;
+  }
+  .light {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:text-mid-yellow:hover {
@@ -1219,10 +1206,6 @@ html.dark {
 
   .md\:m-4 {
     margin: 1rem;
-  }
-
-  .md\:mb-20 {
-    margin-bottom: 5rem;
   }
 
   .md\:mb-\[300px\] {
@@ -1287,10 +1270,6 @@ html.dark {
 
   .md\:w-4\/5 {
     width: 80%;
-  }
-
-  .md\:w-\[310px\] {
-    width: 310px;
   }
 
   .md\:w-\[350px\] {
@@ -1393,10 +1372,6 @@ html.dark {
 
   .lg\:mt-4 {
     margin-top: 1rem;
-  }
-
-  .lg\:w-\[364px\] {
-    width: 364px;
   }
 
   .lg\:w-\[500px\] {
