@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "../Title/Title";
+import { motion } from "framer-motion";
 
 type Section3Props = unknown;
 
@@ -18,7 +19,11 @@ const Section3: React.FC<Section3Props> = () => {
           alignmentMd="left"
           titleColor=""
         />
-        <div className="flex flex-row justify-around md:justify-start flex-wrap w-full mt-10 gap-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { duration: 3 } }}
+          className="flex flex-row justify-around md:justify-start flex-wrap w-full mt-10 gap-10"
+        >
           <div className="flex flex-col w-2/5 ml-2 pt-4">
             <p className="font-bold text-xl">Et mauris</p>
             <span className="leading-4 pt-3">
@@ -48,11 +53,9 @@ const Section3: React.FC<Section3Props> = () => {
               ut sed eros, consectetur viverra.
             </span>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div
-        className="relative flex justify-start items-center my-8"
-      >
+      <div className="relative flex justify-start items-center my-8">
         <img
           src="assets/purple-organic-shape.svg"
           className="w-m-4/5 h-auto object-cover z-0"

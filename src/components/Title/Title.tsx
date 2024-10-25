@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 type Alignment = "center" | "left" | "right";
 
@@ -18,10 +19,14 @@ const Title: React.FC<TitleProps> = ({
   content,
 }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { duration: 2} }}
       className="w-full md:w-1/2 flex flex-col items-center md:items-start z-20"
     >
-      <p className={`font-roboto md:text-[18px] lg:text-[30px] leading-5 text-center md:text-start text-orange font-medium`}>
+      <p
+        className={`font-roboto md:text-[18px] lg:text-[30px] leading-5 text-center md:text-start text-orange font-medium`}
+      >
         {subtitle}
       </p>
       <h2
@@ -30,10 +35,13 @@ const Title: React.FC<TitleProps> = ({
       >
         {title}
       </h2>
-      <p className="font-roboto leading-5 md:leading-9 text-center md:text-start w-full" style={{ color: titleColor }}>
+      <p
+        className="font-roboto leading-5 md:leading-9 text-center md:text-start w-full"
+        style={{ color: titleColor }}
+      >
         {content}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

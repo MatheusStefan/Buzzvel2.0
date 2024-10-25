@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "../Title/Title";
+import { motion } from "framer-motion";
 
 type Section4Props = unknown;
 
@@ -15,7 +16,11 @@ const Section4: React.FC<Section4Props> = () => {
           alignmentMd="left"
           titleColor=""
         />
-        <div className="flex flex-row justify-around md:justify-start flex-wrap w-full mt-10 gap-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { duration: 3 } }}
+          className="flex flex-row justify-around md:justify-start flex-wrap w-full mt-10 gap-10"
+        >
           <div className="flex flex-col w-2/5 pt-4">
             <p className="font-bold text-xl">Erat sit</p>
             <span className="leading-4 pt-3">
@@ -45,12 +50,9 @@ const Section4: React.FC<Section4Props> = () => {
               velit et, ullamcorper malesuada amet, felis.
             </span>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div
-
-        className="relative flex justify-end items-center my-8"
-      >
+      <div className="relative flex justify-end items-center my-8">
         <img
           src="assets/yellow-organic-shape.svg"
           className="w-4/5 md:w-full flex object-cover z-0"

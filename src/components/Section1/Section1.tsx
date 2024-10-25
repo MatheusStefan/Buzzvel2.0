@@ -14,7 +14,7 @@ const Section1: React.FC<Section1> = () => {
         <div className="flex flex-col md:flex-row items-start justify-start">
           <div className="absolute right-0 top-0 mb">
             <img
-              src="assets/Group 57.svg"
+              src="assets/guy-working.webp"
               alt="guy working"
               className="object-cover w-[307px] md:w-[400px] object-center z-0"
             />
