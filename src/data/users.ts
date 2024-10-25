@@ -47,12 +47,4 @@ export const users = [
     userDetails: "10KWh",
     alt: "user-picture",
   },
-  {
-    quote:
-      "Viverra lacus suspendisse elit, adipiscing orci, non turpis etiam sapien. Viverra blandit sem neque pretium. Duis enim semper fermentum consequat aenean libero. Blandit porta leo condimentum dolor, nisi, aliquet ante laoreet.",
-    userPhoto: "Rwanda Melflor",
-    userName: "Courtney Henry",
-    userDetails: "6KWh",
-    alt: "user-picture",
-  },
 ];
