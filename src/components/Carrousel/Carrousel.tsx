@@ -1,10 +1,9 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Card from "../Card/Card";
 import Button from "../Button/Button";
 import { User } from "../../types/userTypes";
-import { ThemeContext } from "../../Context/ThemeContext";
 
 type CarrouselProps = {
   users: User[];
@@ -16,7 +15,6 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
   const itemsRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     const carousel = carouselRef.current;
@@ -83,8 +81,8 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
         <Button
           text=""
           bgColor=""
-          textColor={theme === "dark" ? "#fff" : "#FCD34D"}
-          borderColor={theme === "dark" ? "#fff" : "#FCD34D"}
+          textColor="#FCD34D"
+          borderColor="#FCD34D"
           colorToChange="#78350F"
           orientation="180"
           onClick={handlePrev}
@@ -93,8 +91,8 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
         <Button
           text=""
           bgColor=""
-          textColor={theme === "dark" ? "#fff" : "#FCD34D"}
-          borderColor={theme === "dark" ? "#fff" : "#FCD34D"}
+          textColor="#FCD34D"
+          borderColor="#FCD34D"
           colorToChange="#78350F"
           onClick={handleNext}
           ariaLabel="arrow-right"

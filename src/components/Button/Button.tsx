@@ -1,5 +1,4 @@
-import React, { useState, useContext } from "react";
-import { ThemeContext } from "../../Context/ThemeContext";
+import React, { useState } from "react";
 
 type ButtonProps = {
   text?: string;
@@ -24,7 +23,6 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const { theme } = useContext(ThemeContext);
 
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
@@ -37,8 +35,7 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
       style={{
         backgroundColor: isHovered ? textColor : bgColor,
         color: isHovered ? colorToChange : textColor,
-        borderColor: borderColor,
-        border: `2px solid ${theme === "dark" ? "#581C87" : "#581C87"}`,
+        border: `2px solid ${borderColor}`
       }}
       aria-label={ariaLabel}
       className="

@@ -9,7 +9,7 @@ const Container: React.FC<ContainerProps> = () => {
 
   return (
     <>
-      <div className="bg-purple w-full h-[600px] pl-4 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-evenly relative">
+      <div className="bg-purple w-full h-[500px] flex flex-col md:flex-row items-center md:items-start justify-start md:justify-evenly relative">
         <Title
           subtitle={"Get the Sun to power your home"}
           title={"All the power that you need for your house is now available"}
@@ -20,9 +20,9 @@ const Container: React.FC<ContainerProps> = () => {
         <Button
               text="Request a Quote"
               bgColor={theme === "dark" ? "" : ""}
-              borderColor={theme === "dark" ? "#fff" : "#FCD34D"}
-              textColor={theme === "dark" ? "#fff" : "#FCD34D"}
-              colorToChange={theme === "dark" ? "#581C87" : "#78350F"}
+              borderColor="#FCD34D"
+              textColor="#FCD34D"
+              colorToChange="#78350F"
               ariaLabel="Request a Quote"
             />
           <p className="text-white my-4 z-20">Egestas fringilla aliquam leo</p>

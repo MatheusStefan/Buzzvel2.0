@@ -82,13 +82,13 @@ const Header: React.FC<HeaderProps> = () => {
             </a>
           </div>
           <Button
-              text="Request a Quote"
-              bgColor={theme === "dark" ? "#581C87" : ""}
-              borderColor="#581C87"
-              textColor={theme === "dark" ? "#fff" : "#581C87"}
-              colorToChange={theme === "dark" ? "#581C87" : "#FCD34D"}
-              ariaLabel="Request a Quote"
-            />
+            text="Request a Quote"
+            bgColor=""
+            borderColor="#581C87"
+            textColor={theme === "dark" ? "#fff" : "#581C87"}
+            colorToChange={theme === "dark" ? "#581C87" : "#FCD34D"}
+            ariaLabel="Request a Quote"
+          />
         </div>
       </div>
       <ButtonToggle />

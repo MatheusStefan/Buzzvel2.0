@@ -37,8 +37,8 @@ const Section1: React.FC<Section1> = () => {
             </p>
             <Button
               text="Request a Quote"
-              bgColor={theme === "dark" ? "#581C87" : ""}
-              borderColor="#581C87"
+              bgColor=""
+              borderColor=""
               textColor={theme === "dark" ? "#fff" : "#581C87"}
               colorToChange={theme === "dark" ? "#581C87" : "#FCD34D"}
               ariaLabel="Request a Quote"
@@ -48,7 +48,7 @@ const Section1: React.FC<Section1> = () => {
                 user={{
                   quote:
                     "“Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.",
-                  userPhoto: "Rwanda Melflor",
+                  userPhoto: "Jane Cooper",
                   userName: "Rwanda Melflor",
                   userDetails: "zerowaste.com",
                   alt: "user-picture",
