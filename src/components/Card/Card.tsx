@@ -17,7 +17,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(({ user }, ref) => {
           {`"${user.quote}"`}
         </p>
         <div className="flex justify-start items-center gap-4">
-          <img src={`assets/${user.userPhoto}.png`} alt={user.alt} />
+          <img src={`assets/users/${user.userPhoto}.svg`} alt={user.alt} className="object-cover w-[50px] h-[50px]"/>
           <div>
             <p className="font-normal text-lg text-dark-blue">
               {user.userName}

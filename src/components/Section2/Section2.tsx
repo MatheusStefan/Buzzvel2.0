@@ -55,19 +55,19 @@ const Section2: React.FC<Section2Props> = () => {
       />
       <div className="absolute bottom-[20px] w-full h-fit z-0" ref={imagesRef}>
         <img
-          src="assets/yellow-ellipse.svg"
+          src="assets/shapes/yellow-ellipse.svg"
           alt="orange ellipse"
           className="absolute -left-20 -bottom-40 w-[250px] md:w-fit h-[300px] md:h-[350px] object-cover z-0"
           ref={yellowCircleRef}
         />
         <img
-          src="assets/purple-ellipse.svg"
+          src="assets/shapes/purple-ellipse.svg"
           alt="purple ellipse"
           className="absolute w-1/5 right-0 -bottom-14 md:-bottom-[400px]"
           ref={purpleCircleRef}
         />
         <img
-          src="assets/desktop-screen.svg"
+          src="assets/utility/desktop-screen.svg"
           alt="desktop screen"
           className="absolute md:w-3/4 lg:max-w-4xl w-full object-cover left-1/2 transform -translate-x-1/2"
         />

@@ -27,7 +27,7 @@ const Container: React.FC<ContainerProps> = () => {
             />
           <p className="text-white my-4 z-20">Egestas fringilla aliquam leo</p>
           <img
-            src="assets/Ellipse 1.svg"
+            src="assets/shapes/purple-half-moon.svg"
             alt="purple ellipse"
             className="hidden md:flex md:w-2/5 object-cover absolute bottom-0 md:top-0 right-0 transform md:rotate-0 z-0"
           />
@@ -35,12 +35,12 @@ const Container: React.FC<ContainerProps> = () => {
       </div>
       <div className="flex justify-center bg-purple items-center w-full relative">
         <img
-          src="assets/Macbook.svg"
+          src="assets/utility/Macbook.svg"
           alt="macbook-icon"
           className="w-3/5 z-10"
         />
         <img
-          src="assets/Ellipse 1.svg"
+          src="assets/shapes/purple-half-moon.svg"
           alt="purple ellipse"
           className="w-3/4 h-full md:hidden absolute bottom-0 left-0 md:top-16 transform rotate-180 md:rotate-0 z-0"
         />

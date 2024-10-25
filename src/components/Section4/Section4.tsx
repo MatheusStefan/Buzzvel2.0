@@ -59,7 +59,7 @@ const Section4: React.FC<Section4Props> = () => {
           alt="yellow organic shape"
         ></img>
         <img
-          src="assets/Phone-2.svg"
+          src="assets/utility/Phone-2.svg"
           className="w-3/5 md:w-4/5 h-auto object-cover z-10 absolute right-0 top-20 md:top-40"
           alt="smartphone example"
         ></img>

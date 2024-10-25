@@ -14,7 +14,7 @@ const Section1: React.FC<Section1> = () => {
         <div className="flex flex-col md:flex-row items-start justify-start">
           <div className="absolute right-0 top-0 mb">
             <img
-              src="assets/guy-working.webp"
+              src="assets/utility/guy-working.webp"
               alt="guy working"
               className="object-cover w-[307px] md:w-[400px] object-center z-0"
             />
@@ -48,7 +48,7 @@ const Section1: React.FC<Section1> = () => {
                 user={{
                   quote:
                     "“Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.",
-                  userPhoto: "Jane Cooper",
+                  userPhoto: "Courtney Henry",
                   userName: "Rwanda Melflor",
                   userDetails: "zerowaste.com",
                   alt: "user-picture",

@@ -744,6 +744,14 @@ video {
   height: 100%;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
 .w-1\/5 {
   width: 20%;
 }
@@ -795,6 +803,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[50px\] {
+  width: 50px;
 }
 
 .-translate-x-1\/2 {

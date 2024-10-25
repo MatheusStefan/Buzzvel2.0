@@ -57,12 +57,12 @@ const Section3: React.FC<Section3Props> = () => {
       </div>
       <div className="relative flex justify-start items-center my-8">
         <img
-          src="assets/purple-organic-shape.svg"
+          src="assets/shapes/purple-organic-shape.svg"
           className="w-m-4/5 h-auto object-cover z-0"
           alt="purple organic shape"
         ></img>
         <img
-          src="assets/Phone.svg"
+          src="assets/utility/Phone.svg"
           className="w-m-4/5 h-auto object-cover z-10 absolute left-10 md:left-12 top-5"
           alt="smartphone example"
         ></img>
