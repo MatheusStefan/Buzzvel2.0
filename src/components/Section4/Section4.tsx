@@ -54,7 +54,7 @@ const Section4: React.FC<Section4Props> = () => {
       </div>
       <div className="relative flex justify-end items-center my-8">
         <img
-          src="assets/yellow-organic-shape.svg"
+          src="assets/shapes/yellow-organic-shape.svg"
           className="w-4/5 md:w-full flex object-cover z-0"
           alt="yellow organic shape"
         ></img>
