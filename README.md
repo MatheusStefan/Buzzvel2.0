@@ -15,10 +15,10 @@ Based on the Figma design received the goal is to highlight my proficiency in Re
 
 ## Lighthouse Results
 ### Desktop
-  ![Lighthouse Desktop](https://github.com/user-attachments/assets/e2139c42-c24c-44be-8b4e-95474b24251a)
+  ![Lighthouse Desktop](./src/docs/buzzvel2-0.vercel.app-desktop.html)
 
 ### Mobile
-  ![Lighthouse Mobile](https://github.com/user-attachments/assets/aaa45dd1-97e3-4bcd-9cc5-0d52f9d1485d)
+  ![Lighthouse Mobile](./src/docs/buzzvel2-0.vercel.app-mobile.html)
 
 ## Features
 - **Interactive animations** powered by GSAP and Framer motion for smooth transitions and scroll-based effects.
