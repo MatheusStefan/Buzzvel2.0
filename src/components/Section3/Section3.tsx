@@ -1,10 +1,45 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Title from "../Title/Title";
 import { motion } from "framer-motion";
+import gsap, { ScrollTrigger } from "gsap/all";
 
 type Section3Props = unknown;
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Section3: React.FC<Section3Props> = () => {
+  const imagesRef = useRef(null);
+
+  const mm = gsap.matchMedia();
+
+  useEffect(() => {
+    mm.add("(max-width: 768px)", () => {
+      gsap.to(imagesRef.current, {
+        y: 80,
+        scrollTrigger: {
+          trigger: imagesRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      });
+    });
+    
+    mm.add("(min-width: 1024px)", () => {
+      gsap.to(imagesRef.current, {
+        y: 200,
+        scrollTrigger: {
+          trigger: imagesRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      });
+    })
+
+    return () => mm.revert();
+  }, [mm]);
+
   return (
     <section
       id="services"
@@ -55,7 +90,7 @@ const Section3: React.FC<Section3Props> = () => {
           </div>
         </motion.div>
       </div>
-      <div className="relative flex justify-start items-center my-8">
+      <div className="relative flex justify-start items-center my-8" ref={imagesRef}>
         <img
           src="assets/shapes/purple-organic-shape.svg"
           className="w-m-4/5 h-auto object-cover z-0"

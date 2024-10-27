@@ -65,7 +65,7 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
   return (
     <div className="flex flex-col items-start justify-between overflow-hidden w-full p-6 mt-10">
       <div className="flex flex-row justify-start z-10">
-        <div className="flex items-center justify-around" ref={carouselRef}>
+        <div className="flex items-center justify-around" ref={carouselRef} aria-live="polite">
           <div className="flex gap-x-4" ref={itemsRef}>
             {users.map((user, index) => (
               <Card

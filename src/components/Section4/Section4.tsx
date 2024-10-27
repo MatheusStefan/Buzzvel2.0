@@ -1,10 +1,45 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Title from "../Title/Title";
 import { motion } from "framer-motion";
+import gsap, { ScrollTrigger } from "gsap/all";
 
 type Section4Props = unknown;
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Section4: React.FC<Section4Props> = () => {
+  const imagesRef = useRef(null);
+
+  const mm = gsap.matchMedia();
+
+  useEffect(() => {
+    mm.add("(max-width: 768px)", () => {
+      gsap.to(imagesRef.current, {
+        y: 120,
+        scrollTrigger: {
+          trigger: imagesRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      });
+    });
+    
+    mm.add("(min-width: 1024px)", () => {
+      gsap.to(imagesRef.current, {
+        y: 200,
+        scrollTrigger: {
+          trigger: imagesRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      });
+    })
+
+    return () => mm.revert();
+  }, [mm]);
+
   return (
     <div className="relative flex flex-col md:flex-row md:justify-end items-end gap-6 mb-[100px] md:mt-[50px] md:mb-[300px]">
       <div className="flex flex-col items-center md:items-start md:ml-6 w-full md:w-4/5">
@@ -52,7 +87,10 @@ const Section4: React.FC<Section4Props> = () => {
           </div>
         </motion.div>
       </div>
-      <div className="relative flex justify-end items-center my-8">
+      <div
+        className="relative flex justify-end items-center my-8"
+        ref={imagesRef}
+      >
         <img
           src="assets/shapes/yellow-organic-shape.svg"
           className="w-4/5 md:w-full flex object-cover z-0"
