@@ -1,50 +1,66 @@
-# React + TypeScript + Vite
+# Buzzvel Developer Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was created as part of the application process for a developer position at **Buzzvel**. It demonstrates my skills in React, TypeScript, GSAP (GreenSock Animation Platform), framer-motion and Tailwind.css, combining modern web development techniques with smooth animations and responsive design.
+## Table of Contents
+- [Overview](#overview)
+- [Lighthouse](#lighthouse)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+- [Credits](#credits)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Based on the Figma design received the goal is to highlight my proficiency in React, TypeScript, framer-motion, GSAP and Tailwind.css, while delivering a seamless and engaging user experience. You can access the site <a target="_blank" href="https://buzzvel2-0.vercel.app" rel="noopener noreferrer">here</a>
 
-## Expanding the ESLint configuration
+## Lighthouse Results
+### Desktop
+  ![Lighthouse Desktop](https://github.com/user-attachments/assets/e2139c42-c24c-44be-8b4e-95474b24251a)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Mobile
+  ![Lighthouse Mobile](https://github.com/user-attachments/assets/aaa45dd1-97e3-4bcd-9cc5-0d52f9d1485d)
 
-- Configure the top-level `parserOptions` property like this:
+## Features
+- **Interactive animations** powered by GSAP and Framer motion for smooth transitions and scroll-based effects.
+- **TypeScript integration** for type-safe development.
+- **Responsive design** ensuring an optimal experience on both mobile and desktop devices.
+- **localStorage** to store theme colors
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technologies Used
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **React** – A JavaScript library for building user interfaces.
+- **TypeScript** – A strongly typed programming language that builds on JavaScript.
+- **GSAP** – A JavaScript library for high-performance animations.
+- **Framer motion** - A powerful motion library for React. 
+- **Tailwind.css** – A utility-first CSS framework designed to enable users to create applications faster and easier.
+- **Plop** for improved production
+- **Vercel** for deploy
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Setup Instructions
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com//MatheusStefan/Buzzvel2.0.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd your-project-name
+    ```
+
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Start the development server:
+    ```bash
+    npm run dev
+    ```
+It should open the browser automatically
+
+## Credits
+
+This project was built by [Matheus Stefan](https://github.com/MatheusStefan/) as part of the Buzzvel developer selection process. Special thanks to the team at Buzzvel for the opportunity.

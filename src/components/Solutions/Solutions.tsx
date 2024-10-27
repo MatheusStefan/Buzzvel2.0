@@ -4,11 +4,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 
-type Section2Props = unknown;
+type SolutionsProps = unknown;
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Section2: React.FC<Section2Props> = () => {
+const Solutions: React.FC<SolutionsProps> = () => {
   const yellowCircleRef = useRef<HTMLImageElement>(null);
   const purpleCircleRef = useRef<HTMLImageElement>(null);
   const imagesRef = useRef<HTMLDivElement>(null);
@@ -76,4 +76,4 @@ const Section2: React.FC<Section2Props> = () => {
   );
 };
 
-export default Section2;
+export default Solutions;

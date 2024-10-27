@@ -3,11 +3,11 @@ import Title from "../Title/Title";
 import { motion } from "framer-motion";
 import gsap, { ScrollTrigger } from "gsap/all";
 
-type Section3Props = unknown;
+type ServicesProps = unknown;
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Section3: React.FC<Section3Props> = () => {
+const Services: React.FC<ServicesProps> = () => {
   const imagesRef = useRef(null);
 
   const mm = gsap.matchMedia();
@@ -106,4 +106,4 @@ const Section3: React.FC<Section3Props> = () => {
   );
 };
 
-export default Section3;
+export default Services;

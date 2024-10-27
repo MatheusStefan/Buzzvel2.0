@@ -4,9 +4,9 @@ import Card from "../Card/Card";
 import { motion } from "framer-motion";
 import { ThemeContext } from "../../Context/ThemeContext";
 
-type Section1 = unknown;
+type Products = unknown;
 
-const Section1: React.FC<Section1> = () => {
+const Products: React.FC<Products> = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <>
@@ -62,4 +62,4 @@ const Section1: React.FC<Section1> = () => {
   );
 };
 
-export default Section1;
+export default Products;

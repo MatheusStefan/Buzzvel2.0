@@ -4,9 +4,9 @@ import Button from "../Button/Button";
 import Carrousel from "../Carrousel/Carrousel";
 import { users } from "../../data/users";
 
-type Section5Props = unknown;
+type ConfigureProps = unknown;
 
-const Section5: React.FC<Section5Props> = () => {
+const Configure: React.FC<ConfigureProps> = () => {
   return (
     <section
       id="configure"
@@ -33,4 +33,4 @@ const Section5: React.FC<Section5Props> = () => {
   );
 };
 
-export default Section5;
+export default Configure;

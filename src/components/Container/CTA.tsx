@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import Title from "../Title/Title";
 import Button from "../Button/Button";
 import { ThemeContext } from "../../Context/ThemeContext";
-type ContainerProps = unknown;
+type CtaProps = unknown;
 
-const Container: React.FC<ContainerProps> = () => {
+const Cta: React.FC<CtaProps> = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -49,4 +49,4 @@ const Container: React.FC<ContainerProps> = () => {
   );
 };
 
-export default Container;
+export default Cta;
