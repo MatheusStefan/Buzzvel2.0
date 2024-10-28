@@ -20,15 +20,24 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
   colorToChange,
   orientation = "0",
   ariaLabel,
+  onClick
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { openModal } = useModal();
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    } else {
+      openModal();
+    }
+  };
 
   return (
     <button
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={openModal}
+      onClick={handleClick}
       style={{
         backgroundColor: isHovered ? textColor : bgColor,
         color: isHovered ? colorToChange : textColor,
