@@ -13,7 +13,7 @@ This project was created as part of the application process for a developer posi
 
 Based on the Figma design received the goal is to highlight my proficiency in React, TypeScript, framer-motion, GSAP and Tailwind.css, while delivering a seamless and engaging user experience. You can access the site <a target="_blank" href="https://buzzvel2-0.vercel.app" rel="noopener noreferrer">here</a>
 
-## Lighthouse Results
+## Lighthouse
 ### Desktop
   ![Lighthouse-desktop](https://github.com/user-attachments/assets/7ee97156-ebd2-4a42-be2a-9fd6321b220a)
 
