@@ -9,6 +9,7 @@ type ButtonProps = {
   colorToChange?: string;
   orientation?: string;
   ariaLabel?: string;
+  onClick?: () => void;
 };
 
 const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
