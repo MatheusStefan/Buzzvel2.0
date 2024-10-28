@@ -8,6 +8,7 @@ import Configure from "./components/Configure/Configure";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "./Context/ThemeContext";
 import Cta from "./components/Container/CTA";
+import ModalForm from "./components/ModalForm/ModalForm";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -17,15 +18,20 @@ function App() {
   }, [theme]);
 
   return (
-    <div className={`flex flex-col items-center justify-center ${theme === 'dark' ? "bg-black text-white" : ""}`}>
-      <Header />
-      <Products />
-      <Solutions />
-      <Services />
-      <Services2 />
-      <Configure />
-      <Cta />
-      <Footer />
+    <div
+      className={`flex flex-col items-center justify-center ${
+        theme === "dark" ? "bg-black text-white" : ""
+      }`}
+    >
+        <Header />
+        <Products />
+        <Solutions />
+        <Services />
+        <Services2 />
+        <Configure />
+        <Cta />
+        <Footer />
+        <ModalForm />
     </div>
   );
 }

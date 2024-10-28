@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useModal } from "../../Context/ModalContext";
 
 type ButtonProps = {
   text?: string;
@@ -7,7 +8,6 @@ type ButtonProps = {
   bgColor: string;
   colorToChange?: string;
   orientation?: string;
-  onClick?: () => void;
   ariaLabel?: string;
 };
 
@@ -18,20 +18,16 @@ const Button: React.FC<ButtonProps & { onClick?: () => void }> = ({
   bgColor,
   colorToChange,
   orientation = "0",
-  onClick,
   ariaLabel,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-
-
-  const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => setIsHovered(false);
+  const { openModal } = useModal();
 
   return (
     <button
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={onClick}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={openModal}
       style={{
         backgroundColor: isHovered ? textColor : bgColor,
         color: isHovered ? colorToChange : textColor,

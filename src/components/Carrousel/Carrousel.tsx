@@ -85,7 +85,7 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
           borderColor="#FCD34D"
           colorToChange="#78350F"
           orientation="180"
-          onClick={handlePrev}
+          openModal={handlePrev}
           ariaLabel="arrow-left"
         />
         <Button
@@ -94,7 +94,7 @@ const Carrousel: React.FC<CarrouselProps> = ({ users }) => {
           textColor="#FCD34D"
           borderColor="#FCD34D"
           colorToChange="#78350F"
-          onClick={handleNext}
+          openModal={handleNext}
           ariaLabel="arrow-right"
         />
       </div>
