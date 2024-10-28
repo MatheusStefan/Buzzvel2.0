@@ -27,6 +27,7 @@ Based on the Figma design received the goal is to highlight my proficiency in Re
 - **TypeScript integration** for type-safe development.
 - **Responsive design** ensuring an optimal experience on both mobile and desktop devices.
 - **localStorage** to store theme colors
+- **Context API** to manage global state.
 
 ## Technologies Used
 
